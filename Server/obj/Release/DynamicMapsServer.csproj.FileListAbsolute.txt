@@ -1,0 +1,9 @@
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\bin\Release\DynamicMapsServer.dll
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\obj\Release\DynamicMapsServer.csproj.AssemblyReference.cache
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\obj\Release\DynamicMapsServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\obj\Release\DynamicMapsServer.AssemblyInfoInputs.cache
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\obj\Release\DynamicMapsServer.AssemblyInfo.cs
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\obj\Release\DynamicMapsServer.csproj.CoreCompileInputs.cache
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\obj\Release\DynamicMapsServer.dll
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\obj\Release\refint\DynamicMapsServer.dll
+C:\Users\hy718\Desktop\DynamicMaps\DynamicMaps-5.0BE\Server\obj\Release\ref\DynamicMapsServer.dll

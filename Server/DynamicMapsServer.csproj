@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <RootNamespace>DynamicMaps</RootNamespace>
+        <AssemblyName>DynamicMapsServer</AssemblyName>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <Version>5.0.0</Version>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <GenerateDependencyFile>false</GenerateDependencyFile>
+        <StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>
+        <!-- Server runtime that hosts the mod (same folder as SPT.Server.exe) -->
+        <ServerDir Condition="'$(ServerDir)' == ''">D:\SPT\Client.1.2.0.0.47965\SPT_Runtime</ServerDir>
+        <DeployDir>$(ServerDir)\user\mods\mpstark-dynamicmaps</DeployDir>
+    </PropertyGroup>
+
+    <!-- Server assemblies; referenced from the deployed runtime so the compiled
+         assembly reference version always matches the server that will load it -->
+    <ItemGroup>
+        <Reference Include="SPTarkov.Server.Core">
+            <HintPath>$(ServerDir)/SPTarkov.Server.Core.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="SPTarkov.DI">
+            <HintPath>$(ServerDir)/SPTarkov.DI.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="SPTarkov.Common">
+            <HintPath>$(ServerDir)/SPTarkov.Common.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="SemanticVersioning">
+            <HintPath>$(ServerDir)/SemanticVersioning.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="JetBrains.Annotations">
+            <HintPath>$(ServerDir)/JetBrains.Annotations.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugType>None</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+    </PropertyGroup>
+
+    <!-- Deploy the built mod into the server's user/mods folder -->
+    <Target Name="Deploy" AfterTargets="Build">
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DeployDir)" />
+        <Copy SourceFiles="$(ProjectDir)config.json" DestinationFolder="$(DeployDir)" />
+        <Copy SourceFiles="$(ProjectDir)LICENSE" DestinationFolder="$(DeployDir)" Condition="Exists('$(ProjectDir)LICENSE')" />
+        <Message Importance="high" Text="Deployed DynamicMaps server mod to $(DeployDir)" />
+    </Target>
+
+</Project>
