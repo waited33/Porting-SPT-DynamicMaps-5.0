@@ -25,3 +25,18 @@ position is picked automatically. Three things worth knowing:
 - With the default config the map always shows. If you turn on **Require a map in your inventory**
   then every map needs its item, so install the server part too — otherwise Icebreaker, and the
   other server-generated maps, will not show while that option is enabled.
+
+## 中文
+
+### 新增
+
+**破冰船。** 1.2.0 客户端的破冰船地图现在由本模组绘制：包含全部 16 个楼层（从控制室到舰桥顶），
+并按你所在高度自动选中对应楼层。有几点需要知道：
+
+- 它的美术来自 **TarkovBOT.eu**（经 Tarkov.dev），授权是 **CC BY-NC-SA 4.0**，和本模组其余部分的
+  MIT 不一样。署名见 `Maps/map_and_data_credits.txt`。
+- 原版客户端只自带 Factory、Customs、Woods、Shoreline、Sanatorium、Interchange 六张纸质地图，
+  其余每张图（Ground Zero、Streets、Reserve、Labs、Lighthouse、迷宫，以及现在的破冰船）的图纸都
+  由本模组的服务端部分生成——破冰船的 **"Icebreaker plan map"**（治疗师出售）也是如此。
+- 默认配置下地图始终显示。如果你打开了 **Require a map in your inventory**，那每张图都需要对应
+  道具，请一并安装服务端部分；否则开着该选项时，破冰船以及其它由服务端生成的图不会显示。
